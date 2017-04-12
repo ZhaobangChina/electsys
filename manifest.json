@@ -47,6 +47,15 @@
             ],
             "run_at": "document_start",
             "all_frames": true
+        },
+        {
+            "matches": [
+                "*://electsys.sjtu.edu.cn/edu/student/elect"
+            ],
+            "js": [
+                "content_script/page/refreshButton.js"
+            ],
+            "all_frames": true
         }
     ],
     "permissions": [
