@@ -50,7 +50,7 @@
         },
         {
             "matches": [
-                "*://electsys.sjtu.edu.cn/edu/student/elect"
+                "*://electsys.sjtu.edu.cn/edu/student/elect/*"
             ],
             "js": [
                 "content_script/page/refreshButton.js"
