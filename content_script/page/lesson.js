@@ -237,7 +237,7 @@ function optimize_elect()
             jQuery(radiogroup[radio_index]).parent().after('<span class="fullspan">&nbsp;&nbsp;</span>');
         }
 
-        setInterval("processLidQueue();", document.processInterval);
+        setInterval(processLidQueue, document.processInterval);
     });
 
 }
@@ -265,7 +265,7 @@ function init_query_list(){
         // 如果没有在限制频率内，则直接查询，加快速度
         setTimeout(function () {
             processLidQueue();	// POST first
-            setInterval("processLidQueue();", document.processInterval);
+            setInterval(processLidQueue, document.processInterval);
         }, Math.max(0, diff) + 100);
     });
 }
@@ -386,7 +386,7 @@ function processArrangement(html, lid, url)
         document.processInterval += INTERVAL_STEP;
         console.log(document.processInterval);
         clearAllInterval();
-        setInterval("processLidQueue();", document.processInterval);
+        setInterval(processLidQueue, document.processInterval);
 
         return;
     }
